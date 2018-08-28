@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>html-activate-power-mode</title>
+  <style>
+    body {
+      padding: 0 2em;
+      font-family: sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    textarea,input {
+      background-color: #18191A;
+      color: #eee;
+      font-size: 12pt;
+      box-sizing: border-box;
+      border: 1px solid #141312;
+      box-sizing: border-box;
+      resize: none;
+      width: 100%;
+      margin-bottom: 2em;
+    }
+
+    input {
+      padding: 2px;
+      margin-top: 2px;
+    }
+
+    textarea:focus {
+      outline: none;
+    }
+
+    p {
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>html-activate-power-mode</h1>
+  <textarea rows="10" cols="80">textarea ~</textarea><br>
+  <p>text input :<br><input type="text" placeholder="input text here!" value="text"></p>
+  <p>search input :<br><input type="search" placeholder="input text here!" value="search"></p>
+  <p>tel input :<br><input type="tel" placeholder="input text here!"  value="tel"></p>
+  <p>url input :<br><input type="url" placeholder="input text here!" value="url"></p>
+</body>
+<script src="./html-activate-power-mode.min.js"></script>
+<script>
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+</html>

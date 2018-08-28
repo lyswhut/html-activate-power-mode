@@ -19,8 +19,8 @@ fork from [activate-power-mode](https://github.com/disjukr/activate-power-mode)
 ## options
 
 ```js
-POWERMODE.colorful = true   // 是否打开粒子动画，默认开启
-POWERMODE.shake = true   // 是否打开抖动效果，默认关闭
+POWERMODE.colorful = true   // open particle animation，default open
+POWERMODE.shake = true   // open shake，default close
 ```
 
 ## LICENSE

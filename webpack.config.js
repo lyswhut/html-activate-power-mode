@@ -24,7 +24,7 @@ module.exports = {
     new webpack.BannerPlugin(`
 Author: lyswhut
 Email：lyswhut@qq.com
-Github：https://github.com/lyswhut/
+Github：https://github.com/lyswhut/html-activate-power-mode
 License: MIT
 `
     )

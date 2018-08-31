@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "author": "",
-  "license": "TIM",
+  "author": "lyswhut",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-loader": "^7.1.4",

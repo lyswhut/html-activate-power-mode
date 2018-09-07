@@ -9,7 +9,8 @@ module.exports = {
     filename: 'html-activate-power-mode.min.js',
     path: path.join(__dirname, './dist'),
     libraryTarget: 'umd',
-    library: 'POWERMODE'
+    library: 'POWERMODE',
+    umdNamedDefine: true
   },
   module: {
     rules: [
@@ -23,8 +24,8 @@ module.exports = {
   plugins: [
     new webpack.BannerPlugin(`
 Author: lyswhut
-Email：lyswhut@qq.com
-Github：https://github.com/lyswhut/html-activate-power-mode
+Email: lyswhut@qq.com
+Github: https://github.com/lyswhut/html-activate-power-mode
 License: MIT
 `
     )

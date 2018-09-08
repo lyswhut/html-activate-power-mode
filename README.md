@@ -8,9 +8,9 @@ fork from [activate-power-mode](https://github.com/disjukr/activate-power-mode)
 
 [demo](http://stsky.cn/demo/htmlActivatePowerMode/)
 
-## installation
+## Installation
 
-- use npm install
+- Use npm install
 ```bash
 # install
 npm install html-activate-power-mode -S
@@ -21,7 +21,7 @@ npm install html-activate-power-mode -S
 import POWERMODE from 'html-activate-power-mode'
 ```
 
-- script link
+- Use script link
 ```html
 <script src="./html-activate-power-mode.min.js"></script>
 ```

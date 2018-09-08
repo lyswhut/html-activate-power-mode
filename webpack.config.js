@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+const packageJson = require('./package.json')
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production', // devlopment || production
@@ -22,12 +23,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.BannerPlugin(`
+    new webpack.BannerPlugin(`html-activate-power-mode.js v${packageJson.version}
 Author: lyswhut
-Email: lyswhut@qq.com
 Github: https://github.com/lyswhut/html-activate-power-mode
-License: MIT
-`
+License: MIT`
     )
   ],
 }

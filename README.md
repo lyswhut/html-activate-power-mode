@@ -6,7 +6,7 @@ forked from [activate-power-mode](https://github.com/disjukr/activate-power-mode
 
 现在支持 `textarea`、`text`、`search`、`tel`、`url` 五种输入框的输入特效
 
-[demo](http://stsky.cn/demo/htmlActivatePowerMode/)
+[demo](https://lyswhut.github.io/html-activate-power-mode/dist/index.html)
 
 ## Installation
 

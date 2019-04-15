@@ -32,34 +32,31 @@ function getColor(el) {
     return window.getComputedStyle(el).color;
   }
 }
-function getCaret() {
-  var el = document.activeElement;
+function getCaret(el) {
   var bcr;
-  if (el.tagName === 'TEXTAREA' ||
-  (el.tagName === 'INPUT' && RegexpTypeMatch.test(el.getAttribute('type')))) {
-    var offset = getCaretCoordinates(el, el.selectionEnd);
-    bcr = el.getBoundingClientRect();
-    return {
-      x: offset.left + bcr.left,
-      y: offset.top + bcr.top,
-      color: getColor(el)
-    };
-  }
-  var selection = window.getSelection();
-  if (selection.rangeCount) {
-    var range = selection.getRangeAt(0);
-    var startNode = range.startContainer;
-    if (startNode.nodeType === document.TEXT_NODE) {
-      startNode = startNode.parentNode;
-    }
-    bcr = range.getBoundingClientRect();
-    return {
-      x: bcr.left,
-      y: bcr.top,
-      color: getColor(startNode)
-    };
-  }
-  return { x: 0, y: 0, color: 'transparent' };
+  var offset = getCaretCoordinates(el, el.selectionEnd);
+  bcr = el.getBoundingClientRect();
+  return {
+    x: offset.left + bcr.left,
+    y: offset.top + bcr.top,
+    color: getColor(el)
+  };
+  
+  // var selection = window.getSelection();
+  // if (selection.rangeCount) {
+  //   var range = selection.getRangeAt(0);
+  //   var startNode = range.startContainer;
+  //   if (startNode.nodeType === document.TEXT_NODE) {
+  //     startNode = startNode.parentNode;
+  //   }
+  //   bcr = range.getBoundingClientRect();
+  //   return {
+  //     x: bcr.left,
+  //     y: bcr.top,
+  //     color: getColor(startNode)
+  //   };
+  // }
+  // return { x: 0, y: 0, color: 'transparent' };
 }
 
 function createParticle(x, y, color) {
@@ -76,8 +73,11 @@ function createParticle(x, y, color) {
 }
 
 function POWERMODE() {
+  var el = document.activeElement;
+  if (el.tagName != 'TEXTAREA' && !(el.tagName === 'INPUT' && RegexpTypeMatch.test(el.getAttribute('type')))) return
+
   { // spawn particles
-    var caret = getCaret();
+    var caret = getCaret(el);
     var numParticles = 5 + Math.round(Math.random() * 10);
     while (numParticles--) {
       particles[particlePointer] = createParticle(caret.x, caret.y, caret.color);
